@@ -1,6 +1,6 @@
 import React from 'react';
-import CardComponent from '@/components/card/card.component';
-import { Card } from '@/types/card.type';
+import { Card } from '../../types/card.type';
+import CardComponent from '../card/card.component';
 
 interface HandProps {
   cards: Card[];

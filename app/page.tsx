@@ -1,14 +1,15 @@
 "use client";
 
+import { useCallback, useEffect, useState } from "react";
+import { Card } from "../types/card.type";
+import { useRouter } from "next/navigation";
+import { drawCards, getDeckAndSuffle } from "../services/deck-api.service";
+import { updateScore } from "../utils/blackjack.util";
+import Loader from "../components/loader/loader.component";
+import Hand from "../components/hand/hand.component";
+import GameControls from "../components/controls/controls.component";
+
 // Importações dos componentes e funções auxiliares necessárias para o Blackjack
-import GameControls from '@/components/controls/controls.component'; // Controles do jogo (botoes para ações do jogador)
-import Hand from '@/components/hand/hand.component'; // Exibição das cartas e pontuação da mão (jogador ou dealer)
-import Loader from '@/components/loader/loader.component'; // Componente de carregamento
-import { drawCards, getDeckAndSuffle } from '@/services/deck-api.service'; // Funções de chamada da API de cartas
-import { Card } from '@/types/card.type'; // Tipo que representa uma carta
-import { updateScore } from '@/utils/blackjack.util'; // Função para calcular o valor de uma carta no jogo
-import { useRouter } from 'next/navigation'; // Roteamento para navegação programática
-import React, { useState, useEffect, useCallback } from 'react'; // Hooks do React para estados, efeitos, e callbacks
 
 const BlackjackPage = () => {
   // Estados do jogo

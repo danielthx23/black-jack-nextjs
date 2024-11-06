@@ -1,4 +1,4 @@
-import { Card } from "@/types/card.type";
+import { Card } from "../types/card.type";
 
 export const calculateCardValue = (card: Card): number => {
   if (card?.value === 'ACE') {

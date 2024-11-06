@@ -1,6 +1,6 @@
-import { Card } from '@/types/card.type';
 import Image from 'next/image';
 import React from 'react';
+import { Card } from '../../types/card.type';
 
 interface CardProps {
   card: Card

@@ -1,5 +1,5 @@
-import { DeckResponse, DrawCardResponse } from "@/types/deck.type";
-import { Card } from "@/types/card.type";
+import { Card } from "../types/card.type";
+import { DeckResponse, DrawCardResponse } from "../types/deck.type";
 
 const getApiUrl = (): string => {
   const url = process.env.NEXT_PUBLIC_DECK_API_URL;
